@@ -3,12 +3,12 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h3>La imagen <strong>random</strong> del momento!</h3>
-				<% %>
-				    <a href="#" class="thumbnail">
-					    <img src="http://i.imgur.com/ggrtWGr.jpg" data-src="holder.js/100%x180" alt="...">
+				<!--<% main_img = rand(imagenes.id) %>
+				    <a href="/imagen/<%= main_img.id%>" class="thumbnail">
+					    <img src="<%= main_img.link %>" data-src="holder.js/100%x180" alt="<%= main_img.titulo %>">
 				    </a>
-				    <h1>Titulo</h1>
-			    <% %>
+				    <h1><%= main_img.titulo %></h1>
+			    <% end %> -->
 		</div>
 	</div>
 	<% imagenes.each do |imagen| %>
