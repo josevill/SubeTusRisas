@@ -1,0 +1,22 @@
+<!-- Contenedor Principal -->
+<div class="container">
+	<div class="jumbotron">
+		<div class="container">
+			<h3>La imagen <strong>random</strong> del momento!</h3>
+				<% %>
+				    <a href="#" class="thumbnail">
+					    <img src="http://i.imgur.com/ggrtWGr.jpg" data-src="holder.js/100%x180" alt="...">
+				    </a>
+				    <h1>Titulo</h1>
+			    <% %>
+		</div>
+	</div>
+	<% imagenes.each do |imagen| %>
+	    <!-- Contenedores de Valores de DB -->
+		    <div class="panel panel-default">
+				<div class="panel-body">
+	        		<a href="/imagen/<%= imagen.id %>"><%= imagen.titulo %></a>
+		      	</div>
+		    </div>
+	<% end %>
+</div>

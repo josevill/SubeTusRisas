@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= @page[:title] %></title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/readable/bootstrap.min.css" rel="stylesheet">
+  </head>
+<body>
+  <!-- Barra de Navegacion -->
+  <div class="navbar navbar-default">
+    <!-- Contenedor de Barra -->
+    <div class="container">
+      <!-- Titulo -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Sube tus risas</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/contenido-nuevo">Crear contenido</a></li>
+        <li><a href="acerca-de">Acerca de</a></li>
+      </ul>
+    </div>
+  </div>
+  <%= content %>
+</body>
+</html>
