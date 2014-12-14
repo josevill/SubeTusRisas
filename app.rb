@@ -8,9 +8,9 @@ require_relative "models/content"
 require_relative "models/comments"
 
 Cuba.plugin(Cuba::Render)
-Cuba.use Rack::Session::Cookie, secret: "foobar"
+Cuba.use Rack::Session::Cookie, secret: "foobar" # Cookie
 
-Ohm.redis = Redic.new("redis://127.0.0.1:6379")
+Ohm.redis = Redic.new("redis://127.0.0.1:6379") # Conexion a DB REDIS
 
 # Definicion de Vistas/Contenido
 Cuba.define do

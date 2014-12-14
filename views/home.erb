@@ -4,12 +4,12 @@
 		<div class="container">
 			<h3 align="center">La imagen <strong>random</strong> del momento!</h3>
 				<%
-					id_imagenes = Upload_main.all.ids 
-					randomizer = id_imagenes.sample
-					imagezord = imagenes[randomizer]
+					id_imagenes = Upload_main.all.ids #Fetch every id in DB for any saved image
+					randomizer = id_imagenes.sample # Randomize
+					imagezord = imagenes[randomizer] # Final random image, changes every refresh on page
 				 %>
 				<a href="/imagen/<%= imagezord.id %>" class="thumbnail">
-				    <img src="<%= imagezord.link %>" width="512" height="512" alt="hola">
+				    <img src="<%= imagezord.link %>" width="512" height="512" alt="<%= imagezord.titulo %>">
 				</a>
 				<h1 align="center"><%= imagezord.titulo %></h1>
 		</div>
