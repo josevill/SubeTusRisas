@@ -2,21 +2,25 @@
 <div class="container">
 	<div class="jumbotron">
 		<div class="container">
-			<h3>La imagen <strong>random</strong> del momento!</h3>
-				<!--<% main_img = rand(imagenes.id) %>
-				    <a href="/imagen/<%= main_img.id%>" class="thumbnail">
-					    <img src="<%= main_img.link %>" data-src="holder.js/100%x180" alt="<%= main_img.titulo %>">
-				    </a>
-				    <h1><%= main_img.titulo %></h1>
-			    <% end %> -->
+			<h3 align="center">La imagen <strong>random</strong> del momento!</h3>
+				<%
+					id_imagenes = Upload_main.all.ids 
+					randomizer = id_imagenes.sample
+					imagezord = imagenes[randomizer]
+				 %>
+				<a href="/imagen/<%= imagezord.id %>" class="thumbnail">
+				    <img src="<%= imagezord.link %>" width="512" height="512" alt="hola">
+				</a>
+				<h1 align="center"><%= imagezord.titulo %></h1>
 		</div>
 	</div>
+	<hr />
 	<% imagenes.each do |imagen| %>
 	    <!-- Contenedores de Valores de DB -->
-		    <div class="panel panel-default">
-				<div class="panel-body">
-	        		<a href="/imagen/<%= imagen.id %>"><%= imagen.titulo %></a>
-		      	</div>
-		    </div>
+	<div class="panel panel-default">
+		<div class="panel-body">
+	   		<a href="/imagen/<%= imagen.id %>"><%= imagen.titulo %></a>
+	   	</div>
+	</div>
 	<% end %>
 </div>
